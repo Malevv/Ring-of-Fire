@@ -1,6 +1,6 @@
 export class Game {
 
-    public players: string[] = ['Olaf Scholz',  'Annalena Bearbock', 'Karl Lauterbach'];
+    public players: string[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
