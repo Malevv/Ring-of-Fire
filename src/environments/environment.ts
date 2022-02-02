@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBDrXJsNYXkmagB1QTCBOMN1bMnaThyLUI",
-    authDomain: "ring-of-fire-56cb7.firebaseapp.com",
-    projectId: "ring-of-fire-56cb7",
-    storageBucket: "ring-of-fire-56cb7.appspot.com",
-    messagingSenderId: "690260851363",
-    appId: "1:690260851363:web:3be414543919a652cb5d16"
+    apiKey: "AIzaSyC6kycoQZnBddZCjnzlJ5L_cG1fhivUsfw",
+    authDomain: "ring-of-fire-8786a.firebaseapp.com",
+    projectId: "ring-of-fire-8786a",
+    storageBucket: "ring-of-fire-8786a.appspot.com",
+    messagingSenderId: "912446846457",
+    appId: "1:912446846457:web:55fd5df7e1e7cbf679b928",
+    measurementId: "G-CCERN7ST64"
   }
 };
 
