@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+h1{
+    position: absolute;
+    color:whitesmoke;
+    top: 5%;
+    font-size: 80px;
+    font-family: 'Rye', cursive;
+}
+
+h3 {
+    position: absolute;
+    color:whitesmoke;
+    top: 15%;
+    font-size: 40px;
+    font-family: 'Rye', cursive;
+}
 .start-screen {
-    background-color: #404040;
+    background-color: #000000;
     width: 100vw;
     height: 100vh;
     max-width: 100%;
@@ -9,7 +26,9 @@
     align-items: center;
 
     img {
-        height: 100vh;
+        height: 70vh;
+        padding-left: 20px;
+        padding-top: 25px;
         object-fit: cover;
     }
 }
@@ -18,17 +37,90 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 150px;
+    bottom: 300px;
     display: flex;
     justify-content: center;
 
-    img {
-        width: 40vw;
-        height: auto;
-        cursor: pointer;
+    // img {
+    //     width: 40vw;
+    //     height: auto;
+    //     cursor: pointer;
 
-        &:hover {
-            filter: brightness(1.15);
-        }
-    }
+    //     &:hover {
+    //         filter: brightness(1.15);
+    //     }
+    // }
 }
+
+.btn {
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  color: whitesmoke;
+  background: rgba(223, 159, 20, 0);
+  border-radius: 15px;
+  border: none;
+  font-family: 'Rye', cursive;
+  font-size: 20px;
+  
+  
+  
+  &:hover {
+    // box-shadow: 0 0 20px 10px rgba(230, 30, 10, 0.6);
+    animation: burn 1000ms ease-out forwards;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 40px;
+      width: 100px;
+      height: 40px;
+      background: rgba(255, 230, 110, 1);
+      border-radius: 100%;
+      animation: flare 1000ms ease-out forwards;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 40px;
+      width: 100px;
+      height: 40px;
+      background: rgba(255, 230, 110, 1);
+      border-radius: 100%;
+      animation: flare 1000ms ease-out forwards;
+    }
+  }
+}
+
+@keyframes flare {
+  100% {
+    transform: translateY(-20px) scale(1.5);
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes burn {
+  0% {
+    color: rgba(255, 130, 110, 1);
+    background: rgba(255, 230, 110, 1);
+    box-shadow:
+      0 0 5px 0 rgba(200, 0, 10, 1),
+      0 0 5px 0 rgba(230, 30, 10, 0.8),
+      0 0 5px 0 rgba(230, 230, 10, 0.6);
+  }
+  
+  100% {
+    color: rgb(255, 255, 255);
+    background: rgba(223, 159, 20, 0.238);
+    box-shadow:
+      0 -35px 40px 30px rgba(255, 130, 10, 0),
+      0 -30px 30px 10px rgba(230, 30, 10, 0),
+      0 -20px 10px 0 rgba(255, 255, 10, 0);
+  }
+}
+

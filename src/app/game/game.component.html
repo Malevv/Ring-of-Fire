@@ -5,7 +5,11 @@
 	class="player-position"></app-player>
 
 <div class="field">
-
+	<button (click)="newGame()" class="btn">Start your New Game</button>
+	<div>
+		<img src="./assets/istockphoto-1144162373-170667a-removebg-preview.png"
+			alt>
+	</div>
 	<div class="card-stack">
 
 		<!-- Katenstapel -->
@@ -15,13 +19,11 @@
 			alt
 			srcset>
 
-
 		<!-- Gezogene Karte -->
 		<img (click)="takeCard()"
 			class="top-card"
 			style="right: 25px"
 			src="./assets/cards/card_cover.png">
-
 
 		<!-- Gezogene Karte die liegen bleibt -->
 		<img *ngFor="let card of game.playedCards"
@@ -30,13 +32,12 @@
 			alt
 			srcset>
 
-			
 		<!-- Animierte Karte die gezogen wird -->
-		<img *ngIf="pickCardAnimation"
+		<img *ngIf="game.pickCardAnimation"
 			(click)="takeCard()"
 			class="pick-card"
 			style="right: 25px"
-			src="./assets/cards/{{ currentCard }}.png"
+			src="./assets/cards/{{ game.currentCard }}.png"
 			alt
 			srcset>
 
@@ -44,8 +45,12 @@
 
 </div>
 
-<app-game-info [card]="currentCard" class="card"></app-game-info>
+<app-game-info [card]="game.currentCard"
+	class="card"></app-game-info>
 
-<button mat-fab color="primary" (click)="openDialog()" class="button-add">
+<button (click)="openDialog()"
+	mat-fab
+	color="primary"
+	class="button-add">
 	<mat-icon>person_add_alt</mat-icon>
-  </button>
+</button>
