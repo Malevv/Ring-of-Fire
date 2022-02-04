@@ -24,8 +24,8 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     this.newGame();
     this.route.params.subscribe((params) => {
-      console.log(params.id);
-      this.gameId = params.id;
+      console.log(params['id']);
+      this.gameId = params['id'];
       this.firestore.
         collection('games')
         .doc(this.gameId)

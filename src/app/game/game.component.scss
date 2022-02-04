@@ -1,85 +1,80 @@
 .field {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    background-color: black;        
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    img {
-        position: relative;
-        width: 43vw;
-        object-fit: cover;
-       
-    }
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 .card-stack {
-    position: relative;
-    width: 500px;
-    
-    img {
-        position: absolute;
-        width: 150px;
-        bottom: 220px;
-        
-        
-    }
+  position: relative;
+  width: 500px;
+
+  img {
+    position: absolute;
+    width: 150px;
+    bottom:120px;
+  }
 }
 
 .top-card {
-    cursor: pointer;
-    transition: all 225ms ease-in-out;
+  cursor: pointer;
+  transition: all 225ms ease-in-out;
 
-    &:hover {
-        transform: scale(1.1) translateY(-30px);
-    }
+  &:hover {
+    transform: scale(1.1) translateY(-30px);
+  }
 }
 
-.played-card{
-    right: 25px;
-    transform: scale(1.1) translateX(-320px) translateY(-100px) rotate(510deg);
+.played-card {
+  right: 25px;
+  transform: scale(1.1) translateX(-320px) translateY(-100px) rotate(510deg);
 }
 
 .pick-card {
-    animation: pick-card-animation 1s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: pick-card-animation 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes pick-card-animation {
-    0% {
-        transform: scale(1);
-    }
-    30% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-   
-    100% {
-        transform: scale(1.1) translateX(-320px) translateY(-100px) rotate(510deg);
-    }
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1) translateX(-320px) translateY(-100px) rotate(510deg);
+  }
 }
 
-
 .player-position {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
 .button-add {
-    position: absolute;
-    right: 35px;
-    bottom: 35px;
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
 }
 
-
-
-
 .btn {
-    position: relative;
+  position: absolute;
+  top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,16 +84,14 @@
   background: rgba(223, 159, 20, 0);
   border-radius: 15px;
   border: none;
-  font-family: 'Rye', cursive;
-  
-  
-  
+  font-family: "Rye", cursive;
+
   &:hover {
     // box-shadow: 0 0 20px 10px rgba(230, 30, 10, 0.6);
     animation: burn 1000ms ease-out forwards;
-    
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 40px;
       width: 100px;
@@ -109,7 +102,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 40px;
       width: 100px;
@@ -133,19 +126,73 @@
   0% {
     color: rgba(255, 130, 110, 1);
     background: rgba(255, 230, 110, 1);
-    box-shadow:
-      0 0 5px 0 rgba(200, 0, 10, 1),
-      0 0 5px 0 rgba(230, 30, 10, 0.8),
-      0 0 5px 0 rgba(230, 230, 10, 0.6);
+    box-shadow: 0 0 5px 0 rgba(200, 0, 10, 1), 0 0 5px 0 rgba(230, 30, 10, 0.8), 0 0 5px 0 rgba(230, 230, 10, 0.6);
   }
-  
+
   100% {
     color: rgb(255, 255, 255);
     background: rgba(223, 159, 20, 0.238);
-    box-shadow:
-      0 -35px 40px 30px rgba(255, 130, 10, 0),
-      0 -30px 30px 10px rgba(230, 30, 10, 0),
+    box-shadow: 0 -35px 40px 30px rgba(255, 130, 10, 0), 0 -30px 30px 10px rgba(230, 30, 10, 0),
       0 -20px 10px 0 rgba(255, 255, 10, 0);
   }
 }
 
+// @media screen and (max-width: 610px) {
+//   .btn {
+//     position: absolute;
+//     top: 10px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100px;
+//     height: 25px;
+//     font-size: 10px;
+//     background: rgba(223, 159, 20, 0);
+//     border-radius: 15px;
+//     border: none;
+//     font-family: "Rye", cursive;
+//   }
+
+//   .card-stack {
+//     position: relative;
+//     width: 100px;
+
+//     img {
+//       position: absolute;
+//       width: 100px !important;
+//       bottom: -60px !important;
+//       left: -90px !important;
+//     }
+//   }
+
+//   .top-card {
+//     cursor: pointer;
+//     animation: none !important;
+//   }
+
+//   .played-card {
+//     right: 25px;
+//     transform: scale(1.1) translateX(-120px) translateY(-10px) rotate(510deg) !important;
+//   }
+
+//   .pick-card {
+//     animation: pick-card-animation 1s ease-in-out;
+//     animation-fill-mode: forwards;
+//   }
+
+//   @keyframes pick-card-animation {
+//     0% {
+//       transform: scale(1);
+//     }
+//     30% {
+//       transform: scale(1.1);
+//     }
+//     50% {
+//       transform: scale(1.2);
+//     }
+
+//     100% {
+//       transform: scale(1.1) translateX(820px) translateY(-10px) rotate(510deg) !important;
+//     }
+//   }
+// }
